@@ -1,0 +1,76 @@
+
+NEWTON SECOND LAW
+
+Pseudocode
+STORE “m” with the value of 600			//m=massa
+STORE “a” with the value of 2				//a=percepatan benda
+STORE “ΣF” without any value	//ΣF=resultan gaya (Newton)
+CALCULATE  ΣF = m * a
+SET ΣF with calculation result
+DISPLAY ΣF
+
+Algorithm
+	1.	Simpan “massa” dengan nilai 600
+	2.	Simpan “percepatan benda” dengan nilai 2
+	3.	Simpan “resultan gaya” tanpa diberikan nilai. Ini akan dihitung.
+	4.	Hitung hasil perkalian dengan “massa” dikali dengan “percepatan benda”
+	5.	Setelah mendapat hasil perhitungan, isikan hasilnya ke dalam “resultan gaya”
+	6.	Tampilkan nilai “resultan gaya”
+
+
+TAHUN KABISAT
+
+Pseudocode
+SET “tahun” as any number
+IF “tahun” mod 4 == 0 and (“tahun” mod 100 > 0 or “tahun” mod 400 == 0)
+	DISPLAY “Tahun Kabisat”
+ELSE
+	DISPLAY “Bukan Tahun Kabisat”
+
+
+Algorithm
+	1.	Simpan “tahun” dengan nilai apapun 
+	2.	Hitung “tahun” untuk menentukan apakah tahun tersebut merupakan tahun kabisat atau bukan tahun kabisat
+	3.	Jika tahun mod 4 sama dengan 0 dan tahun mod 100 lebih besar dari 0
+	4.	Tampilkan “Tahun Kabisat”
+	5.	Jika  tahun mod 4 sama dengan 0 dan juga tahun mod 400 sama dengan 0
+	6.	Tampilkan “Tahun Kabisat”
+	7.	Tampilkan “Bukan tahun kabisat” jika semua kriteria diatas tidak terpenuhi. 
+
+LAUNDRY DAY
+
+Pseudocode
+STORE  “jumlahBaju” with the value of 0
+WHILE “jumlahBaju” < 21
+	ADD “jumlahBaju” by 1
+	DISPLAY “baju ke: ” + jumlahBaju
+
+Algorithm
+	1.	Simpan “baju” dengan nilai 0.
+	2.	Ketika jumlah “baju” lebih kecil dari 21, Tambah “baju” dengan 1. Berhenti jika jumlah “baju” sudah 21.
+	3.	Tampilkan nilai baju, kembali ke step 2.
+
+
+
+PERIKSA KUKU
+
+Pseudocode
+STORE “siswa” with the value of 0
+STORE “kukupanjang” equals to true
+WHILE “siswa” < 41
+	IF “kukupanjang” equals to true
+		DISPLAY “Kena Hukuman”
+	ELSE 
+		DISPLAY “Memuji siswa”
+	ADD siswa by 1 
+Algorithm
+	1.	Simpan “siswa” dengan nilai 0
+	2.	Simpan “kukupanjang” dengan nilai benar
+	3.	Ketika “siswa” kurang dari 41, maka ke step kondisi 4. Berhenti jika siswa jumlah siswa lebih dari 40.
+	4.	Jika kuku panjang adalah benar, tampilkan “Kena Hukuman”
+	5.	Jika tidak, tampilkan “Memuji siswa”
+	6.	Tambahkan “siswa” dengan 1, kembali ke step nomor 3.
+ 	 	
+	
+
+
