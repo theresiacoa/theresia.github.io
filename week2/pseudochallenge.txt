@@ -40,36 +40,40 @@ LAUNDRY DAY
 
 Pseudocode
 STORE  “jumlahBaju” with the value of 0
-WHILE “jumlahBaju” < 21
+WHILE “jumlahBaju” < 21 and 
 	ADD “jumlahBaju” by 1
-	DISPLAY “baju ke: ” + jumlahBaju
+END WHILE
+DISPLAY “Menjalankan Mesin Cuci"
 
 Algorithm
 	1.	Simpan “jumlahBaju” dengan nilai 0.
-	2.	Ketika “jumlahBaju” lebih kecil dari 21, Tambah “baju” dengan 1. Berhenti apabila jumlah “baju” sudah 21.
-	3.	Tampilkan “baju ke: “ dengan nilai jumlahBaju, kembali ke step 2.
+	2.	Ketika “jumlahBaju” lebih kecil dari 21, Tambah “baju” dengan 1.
+	3.	Tampilkan “Menjalankan Mesin Cuci" ketika “jumlahBaju” diatas 20
 
 
 
 PERIKSA KUKU
 
 Pseudocode
-STORE “siswa” with the value of 0
-STORE “kukupanjang” equals to true
-WHILE “siswa” < 41
-	IF “kukupanjang” equals to true
-		DISPLAY “Kena Hukuman”
-	ELSE 
-		DISPLAY “Memuji siswa”
-	ADD siswa by 1 
+STORE "Murid" with 0
+
+WHILE "Murid" <= 40
+  ADD "Murid" by 1
+  IF "Murid" punya "kuku panjang"
+    DISPLAY "dihukum"
+  ELSE IF "Murid" punya "kuku pendek"
+    DISPLAY "dipuji"
+  END IF
+END While
+
 Algorithm
-	1.	Simpan “siswa” dengan nilai 0
-	2.	Simpan “kukupanjang” dengan nilai benar
-	3.	Ketika “siswa” kurang dari 41, maka ke step kondisi 4. Berhenti jika siswa jumlah siswa lebih dari 40.
-	4.	Jika kuku panjang adalah benar, tampilkan “Kena Hukuman”
-	5.	Jika tidak, tampilkan “Memuji siswa”
-	6.	Tambahkan “siswa” dengan 1, kembali ke step nomor 3.
- 	 	
-	
+	1. Simpan “siswa” dengan nilai 0
+	2. Selama "murid" dibawah 40 masuk ke step 2.a, jika murid diatas 40, masuk ke step 5
+		2.a. murid tambah 1, masuk ke step 3
+	3. Jika murid mempunyai "kuku panjang", masuk ke step 3.a. Jika tidak, masuk ke step 4.
+		3.a. tampilkan dihukum. balik ke step 2.
+	4. Jika murid mempunyai "kuku pendek", tampilkan dipuji. Balik ke step 2
+	5. END
+
 
 
