@@ -1,9 +1,11 @@
-function balikString(str) {
-  var kata = '';
-  for (var i = 1; i <= str.length; i++){
-		kata = kata + str[str.length - i];
+function balikString(arr) {
+	var str = arr.toString();
+	var kata = '';
+	
+  for (var i = str.length-1; i >= 0; i--){
+		kata = kata + str[i];
 	}
 	return kata;
 }
-  
+	
 console.log(balikString(['Hello World!']));
