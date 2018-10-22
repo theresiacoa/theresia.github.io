@@ -3,11 +3,13 @@ body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   background-color: #ffffff;
   color: #031431;
-  margin: 10px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 h1 {
-  color: #00887a;
+  color: #564D4A;
   text-align: center;
   font-size: 40px;
   padding: 20px;
@@ -18,54 +20,75 @@ p {
   font-size: 20px;
 }
 
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
 /* NAVBAR */
-.header {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #00887a;
+  background-color: #564D4A;
 }
 
-.header a {
+li {
   float: left;
+}
+
+li a {
   display: block;
-  color: #ffffff;
+  color: white;
   text-align: center;
-  padding: 10px 16px;
-  margin: 15px;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
-.header a:hover {
-  background-color: white;
-  color: #00887a;
-  display: block;
-  padding: 10px 16px;
-  margin: 15px;          /*PROBLEM __ CANNOT TAKE A WHOLE BLOCK, warna mau full*/
+li a:hover {
+  background-color: #111;
 }
 
 /* HOME */
-#home {                            /*ONLY bg yang pake opacity*/
-  background: url(./kaki.jpg);
-  background-size: auto;
+.main-block {
+  padding-top: 100px;
+  height: 550px;
+}
+
+.bg-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bg-img::before {                       
+  background-image: url(./kaki.jpg);
+  background-size: cover;
+  content: "";
   display: block;
-  padding: 100px;
-  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 60px 20px;
+  float: center;
+  width: 97.2%;
+  height: 625px;
+  z-index: -2;
+  opacity: 0.5;
 }
 
 .intro h1 {
   color: #031431;
   font-size: 50px;
-  margin-top: 50px;
-  font-family: cursive;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   float: center;
   text-align: center;
   position: relative;
-
+  font-style: oblique;
 }
 .intro #quote {
-  color: #00887a;
+  color: #564D4A;
   font-size: 70px;
   font-style: bold;
 }
@@ -74,8 +97,9 @@ p {
 #about {
   display: block;
   width: 100%;
-  height: auto;
+  height: 350px;
   box-sizing: border-box;
+  color: #564D4A;
 }
 
 img {
@@ -99,7 +123,7 @@ img {
   margin-top: 250px;
   width: 100%;
   height: 500px;
-  background-color: #00887a;
+  background-color: #564D4A;
   color: #ffffff;
   position: relative;
 }
@@ -113,17 +137,29 @@ img {
   opacity: 0.8;
   font-size: 30px;
   font-style: oblique;
-  margin-top: 100px;
-  margin-right: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: #ffffff;
 }
 
 /*CONTACT*/
 
+#contact {
+  width: 100%;
+  min-height: 132px;
+  background-color: #ffffff;
+  text-align:center;
+}
+
 .fa {
+  display: block;
+  width: 2%;
   padding: 20px;
-  margin: 10px;
   font-size: 50px;
-  width: 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin: 0 auto;
   text-align: center;
 }
 
