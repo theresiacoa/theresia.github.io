@@ -1,18 +1,19 @@
-function perkalianUnik(arr) {
-  var perkalian = [];
-  for (var i = 0; i < arr.length; i++) {
-    var multiply = 1;
-    for (var j = 0; j < arr.length; j++) {
-      if (i!==j) {
-        multiply = multiply * arr[j];
+function perkalianUnik(input) {
+  var result = [];
+
+  for (var i = 0; i < input.length; i++) {
+    var angka = 1;
+    for (var j = 0; j < input.length; j++) {
+      if (i !== j) {
+        angka = angka * input[j];
       }
     }
-    perkalian.push(multiply); 
+    result.push(angka);
   }
-  return perkalian;
+  return result;  
 }
 
-
+// TEST CASES
 console.log(perkalianUnik([2, 4, 6])); // [24, 12, 8]
 console.log(perkalianUnik([1, 2, 3, 4, 5])); // [120, 60, 40, 30, 24]
 console.log(perkalianUnik([1, 4, 3, 2, 5])); // [120, 30, 40, 60, 24]

@@ -1,11 +1,12 @@
-function balikString(arr) {
-	var str = arr.toString();
-	var kata = '';
-	
-  for (var i = str.length-1; i >= 0; i--){
-		kata = kata + str[i];
+function array(input) {
+	var result = '';
+	for (var i = input.length - 1; i >= 0; i--) {
+		result += input[i];
 	}
-	return kata;
+	return result;
 }
-	
-console.log(balikString(['Hello World!']));
+
+console.log(array('hello world!'));
+//input "hello world!"
+//output
+"!dlrow olleh"

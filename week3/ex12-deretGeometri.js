@@ -1,14 +1,13 @@
-function tentukanDeretGeometri(arr) {
-  var array =[];
-  for (let i = 0; i < arr.length-1;i++) {
-    var deret = arr[i+1] / arr[i];
-    array.push(deret);
-  }
-  for (var j = 0; j < array.length; j++) {
-    if (array[j] !== array[0]) {
+function tentukanDeretGeometri(input) {
+  var result = '';
+  var nilaiAwal = input[1] / input[0];
+  for (var i = 0; i < input.length - 1; i++) {
+    nilai = input[i + 1] / input[i];
+    if (nilai !== nilaiAwal) {
       return false;
     }
-  } return true;
+  }
+  return true;
 }
 
 // TEST CASES

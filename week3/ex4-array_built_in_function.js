@@ -1,64 +1,66 @@
-var input = 
-["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
+var input =
+  ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];
 
-function dataHandling2 () {
-
+function dataHandling2(input) {
   input.splice(4, 1, "Pria", "SMA Internasional Metro");
-  input.splice(1, 2, "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung");
+  input.splice(2, 1, "Provinsi Bandar Lampung");
   console.log(input);
 
-  var tanggal = input[3].split("/");
-    switch (tanggal[1]) {
-      case 1:
-        console.log("January");
-        break;
-      case 2:
-        console.log("February");
-        break;
-      case 3:
-        console.log("March");
-        break;
-      case 4:
-        console.log("April");
-        break;
-      case 5:
-        console.log("May");
-        break;
-      case 6:
-        console.log("June");
-        break;
-      case 7:
-        console.log("July");
-        break;
-      case 8:
-        console.log("August");
-        break;
-      case 9:
-        console.log("September");
-        break;
-      case 10:
-        console.log("October");
-        break;
-      case 11:
-        console.log("November");
-        break;
-      case 12:
-        console.log("December");
-        break;
-    }
+  var tanggal = input[3].split('/');
+  var bulan = parseInt(tanggal[1]); 
+  //console.log(bulan);
+  switch (bulan) {              //case and input must have the same type -- num OR str
+    case 01:
+      bulan = 'Jan';
+      break;
+    case 02:
+      bulan = 'Feb';
+      break;
+    case 03:
+      bulan = 'Mar';
+      break;
+    case 04:
+      bulan = 'Apr';
+      break;
+    case 05:
+      bulan = 'May';
+      break;
+    case 06:
+      bulan = 'June';
+      break;
+    case 07:
+      bulan = 'Jul';
+      break;
+    case 08:
+      bulan = 'Aug';
+      break;
+    case 09:
+      bulan = 'Sept';
+      break;
+    case 10:
+      bulan = 'Oct';
+      break;
+    case 11:
+      bulan = 'Nov';
+      break;
+    case 12:
+      bulan = 'Dec';
+      break;
+  }
+  console.log(bulan);
 
-    tanggal.sort(function(a,b) {
-      return b - a;
-    });
-    console.log(tanggal);
+  tanggal.sort(function (a,b) {
+    return b - a;
+  });
+  console.log(tanggal);
 
-    var tanggal2 = input[3].split("/").join("-");
-    console.log(tanggal2);
+  var tanggalJoin = input[3].split('/').join('-');
+  console.log(tanggalJoin);
 
-    var nama = input.slice(1,2); //take index [1] only
-    var nama = nama.toString();
-    var namaDepan = nama.slice(0,15);
-    console.log(namaDepan);
+  var stringNama = input[1].toString();
+  stringNama.slice(15);
+  console.log(stringNama);
 }
+
 
 dataHandling2(input);

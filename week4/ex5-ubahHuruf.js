@@ -1,15 +1,17 @@
 function ubahHuruf(kata) {
-  var dict = "abcdefghijklmnopqrstuvwxyz";
-  var kataBaru = "";
+  
+  var kamus = 'abcdefghijklmnopqrstuvwxyz';
+  var result = '';
 
   for (var i = 0; i < kata.length; i++) {
-    for (var j = 0; j < dict.length; j++) {
-      if (kata[i] === dict[j]) {
-        kataBaru = kataBaru + dict[j+1];
+    for (var j = 0; j < kamus.length; j++) {
+      if (kata[i] === kamus[j]) {
+        result += kamus[j+1];
+        break;
       }
     }
   }
-  return kataBaru;
+  return result;
 }
 
 // TEST CASES

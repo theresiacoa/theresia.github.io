@@ -1,10 +1,10 @@
-function checkAB(str) {
-
-  for (var i = 0; i < str.length; i++) {
-    var minDistance = str[i+4];
-    if (str[i] === 'a' && minDistance === 'b') {
+//ab jarak 3
+function checkAB(input) {
+  for (var i = 0; i < input.length; i++) {
+    var distance = input[i+4];
+    if (input[i] === 'a' && distance === 'b') {
       return true;
-    } else if (str[i] === 'b' && minDistance === 'a') {
+    } else if (input[i] === 'b' && distance === 'a') {
       return true;
     }
   }

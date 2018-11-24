@@ -1,21 +1,14 @@
 function fpb(angka1, angka2) {
-  var fp = 0;
-  var angka = 0;
-
-  if (angka1 < angka2) {
-    angka = angka2;
-  } else {
-    angka = angka1;
-  }
-
-  for (var i = 1; i < angka; i++) {
-    if (angka1 % i === 0 && angka2 % i === 0) {
-      if (fp < i) {
-        fp = i;
+  var max = 0;
+  for (var i = 1; i < angka2; i++) {
+    if (angka2 % i === 0 && angka1 % i === 0) {
+      var result = i;
+      if (i > max) {
+        max = i;
       }
     }
   }
-  return fp;
+  return max;
 }
 
 // TEST CASES

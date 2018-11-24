@@ -1,19 +1,21 @@
-function mengelompokkanAngka(arr) {
-  var myArray = [
-    [], [], []
-  ];
+//arr1 === genap
+//arr2 === ganjil
+//arr3 === kelipatan 3
 
-  //angka kelipatan 3, baris k3
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 3 === 0) {
-      myArray[2].push(arr[i]);
-    } else if (arr[i] % 2 === 0) {
-      myArray[0].push(arr[i]);
-    } else if (arr[i] % 2 !== 0) {           //angka ganjil, baris kedua
-      myArray[1].push(arr[i]);
+function mengelompokkanAngka(input) {
+  var result = [[], [], []];
+  //console.log(result[2]);
+
+  for (var i = 0; i < input.length; i++) {
+    if (input[i] % 3 === 0) {
+      result[2].push(input[i]);
+    } else if (input[i] % 2 === 0) {
+      result[0].push(input[i]);
+    } else if (input[i] % 2 === 1) {
+      result[1].push(input[i]);
     }
   }
-  return myArray;
+  return result;
 }
 
 // TEST CASES

@@ -1,19 +1,22 @@
-function graduates (students) {
-  var resultObj = {};
-  //give the skeleton for the obj
-  for (let i = 0; i < students.length; i++) {
-    resultObj[students[i].class] = [];
-  } 
+//nilai student >= 75
+function graduates(students) {
+  var obj = {};
 
   for (var i = 0; i < students.length; i++) {
-    if (students[i].score >= 75 ) {
-      var obj = {};
-      obj.name = students[i].name;
-      obj.score = students[i].score;
-      resultObj[students[i].class].push(obj);
+    if (obj[students[i].class] === undefined) {
+      obj[students[i].class] = []
+    }
+   // console.log(obj);
+   
+    if (students[i].score >= 75) {
+      var lulus = {
+        nama: students[i].name,
+        score: students[i].score
+      }
+      obj[students[i].class].push(lulus);
     }
   }
-  return resultObj;
+  return obj;
 }
 
 console.log(graduates([

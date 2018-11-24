@@ -1,20 +1,15 @@
-function tentukanDeretAritmatika(arr) {
-  var array =[];
-  for (let i = 0; i < arr.length-1;i++) {
-    var deret = arr[i+1] - arr[i];
-    array.push(deret);
-  }
-  for (var j = 0; j < array.length; j++) {
-    if (array[j] !== array[0]) {
+function tentukanDeretAritmatika(input) {
+  var result = [];
+
+  var selisihAwal = input[1] - input[0];
+  for (var i = 0; i < input.length-1; i++) {
+    var selisih = input[i+1] - input [i];
+    if (selisih !== selisihAwal) {
       return false;
     }
-  } return true;
-    
-    // var selisih = array.reduce(function(a,b) {
-    //   return a === b;
-    // }, 0);
+  }
+  return true;
 }
-
 
 // TEST CASES
 console.log(tentukanDeretAritmatika([1, 2, 3, 4, 5, 6])); // true

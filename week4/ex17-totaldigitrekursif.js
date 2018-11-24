@@ -1,13 +1,10 @@
 function totalDigitRekursif(angka) {
-  //basecase / limit
-  var str = angka.toString();
-  if (str.length < 1) {
+  angkaStr = angka.toString();
+
+  if (angkaStr.length === 0) {
     return 0;
   }
-
-  var angkaDepan = str[0];
-  var angkaSisa = str.substr(1, str.length-1);
-  return Number(angkaDepan) + totalDigitRekursif(angkaSisa);
+  return Number(angkaStr[0]) + totalDigitRekursif(angkaStr.substr(1));
 }
 
 // TEST CASES

@@ -1,22 +1,24 @@
+//nilai paling tinggi for every class
 function highestScore(students) {
+  var obj = {};
+  var nilai = 0;
 
-  //to give each class an object {}
-  var resultObj = {};
   for (var i = 0; i < students.length; i++) {
-    resultObj[students[i].class] = {
-      name: '',
-      score: 0
-    };
-  }
-
-  for (var j = 0; j < students.length; j++) {
-    if (students[j].score > resultObj[students[j].class]['score']) {
-      highScore = students[j].score;
-      resultObj[students[j].class]['name'] = students[j].name;
-      resultObj[students[j].class]['score'] = highScore;
+    if (obj[students[i].class] === undefined) {
+      obj[students[i].class] = {
+        name: students[i].name,
+        score : students[i].score
+      };
     }
+    
+    if (obj[students[i].class].score > nilai) {
+      nilai = students[i].score;
+      obj[students[i].class].score = students[i].score;
+      obj[students[i].class].name = students[i].name;
+    }
+    //console.log(obj);
   }
-  return resultObj;
+  return obj;
 }
 
 // TEST CASE

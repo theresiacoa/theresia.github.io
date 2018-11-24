@@ -1,67 +1,62 @@
-//WHILE LOOPING
-console.log("LOOPING PERTAMA");
-var counter = 0;
-while (counter >= 0 && counter < 20) {
-    counter = counter + 2;
-    console.log(counter + " - I love coding");
+//While looping
+console.log('looping pertama');
+var counter = 2;
+while (counter <= 20) {
+  console.log(counter + ' - I love coding');
+  counter += 2;
 }
-
-//WHILE LOOPING 
-console.log("LOOPING KEDUA");
-var counter = 0;
-var temp = 20;
-while (counter >= 0 && counter < 10 ) {
-    counter++;
-    console.log(temp + " - I will become fullstack developer");
-    temp = temp - 2;
+console.log('looping kedua');
+var count = 20;
+while (count > 0) {
+  console.log(count + ' - I will become a full stack developer');
+  count -= 2;
 }
-console.log("\n");
+console.log('\n');
 
-//FOR LOOPING
-console.log("LOOPING PERTAMA");
-var temp = 0;
-for (var i = 0; i < 20; i++) {
-    temp++;
-    console.log( temp + " - I love coding");
+
+//for loop
+console.log('looping pertama');
+for (var i = 1; i <= 20; i++) {
+  console.log(i + ' - I love coding');
 }
-
-//FOR LOOPING
-console.log ("LOOPING KEDUA");
-var temp = 20;
-for (var i = 0; temp > 0; i++) {
-    console.log(temp + " - I will become fullstack developer");
-    temp--;
+console.log('looping kedua')
+for (var j = 20; j > 0; j--) {
+  console.log(j + ' - I will become a full stack developer');
 }
+console.log('\n');
 
-//ANGKA GENAP & GANJIL
-for (var i = 1; i <= 100; i++) {
-    if (i % 2 === 0) {
-        console.log("Genap");
-    } else {
-        console.log("Ganjil");
-    }
+
+//angka ganjil & genap
+//counter++
+var angka = 100;
+for (var k = 1; k < angka; k++) {
+  if (k % 2 === 1) {
+    console.log('ganjil');
+  } else {
+    console.log('genap');
+  }
 }
+console.log('\n');
 
-for (var i = 1; i <= 100; i+=2) {
-    if (i % 3 === 0) {
-        console.log("3 kelipatan 3");
-    } else {
-        console.log("");
-    }
+//counter+=2 dengan kelipatan 3
+for (var l = 1; l <= angka; l+=2) {
+  if (l % 3 === 0) {
+    console.log(l + ' kelipatan 3');
+  }
 }
+console.log();
 
-for (var i = 1; i <= 100; i+=5) {
-    if (i % 6 === 0) {
-        console.log("6 kelipatan 6");
-    } else {
-        console.log("");
-    }
+//counter += 5 with kelipatan 6
+for (var m = 1; m <= angka; m+= 5) {
+  if (m % 6 === 0) {
+    console.log(m + ' kelipatan 6');
+  }
 }
+console.log();
 
-for (var i = 1; i <= 100; i+=9) {
-    if (i % 10 === 0) {
-        console.log("10 kelipatan 10");
-    } else {
-        console.log("");
-    }
+//counter+=9 with kelipatan 10
+for (var n = 1; n <= angka; n+=9) {
+  if (n % 10 === 0) {
+    console.log(n + ' kelipatan 10');
+  }
 }

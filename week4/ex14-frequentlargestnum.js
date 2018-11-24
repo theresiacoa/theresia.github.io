@@ -1,30 +1,34 @@
-//NOT DONE YET
-
 function sorting(arrNumber) {
-  arrNumber.sort(function (a,b) {
-    return a > b;
-  });
+  for (var i = 0; i < arrNumber.length; i++) {
+    if (arrNumber[i] > arrNumber[i+1]) {
+      temp = arrNumber[i];
+      arrNumber[i] = arrNumber[i+1];
+      arrNumber[i+1] = temp;
+      i = -1;
+    }
+  }
+  //console.log(arrNumber);
   return arrNumber;
 }
 
 function getTotal(arrNumber) {
-  var angka = arrNumber[arrNumber.length-1]
-  var jumlah = 0;
-  for (i = 0; i <= arrNumber.length - 1; i++) {
-      if (angka === arrNumber[i]) {
-         jumlah++;
-      }
+  var largestNum = arrNumber[arrNumber.length-1];
+  var count = 0;
+  for (var j = 0; j < arrNumber.length; j++) {
+    if (arrNumber[j] === largestNum) {
+      count++;
+    }
   }
-  if (angka === undefined) {
-    return "''";
-  } else {
-    return 'angka paling besar adalah '+ angka + ' dan jumlah kemunculan sebanyak ' + jumlah + ' kali'
-  }
+  return 'angka paling besar adalah ' + largestNum + ' dan jumlah kemunculan sebanyak ' + count + ' kali ';
 }
 
 function mostFrequentLargestNumbers(arrNumber) {
   var listSort = sorting(arrNumber);
   var countHighest = getTotal(listSort);
+  
+  if (arrNumber.length === 0) {
+    return '';
+  }
   return countHighest;
 }
 

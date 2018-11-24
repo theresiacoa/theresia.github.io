@@ -1,17 +1,21 @@
 function urutkanAbjad(str) {
-  var abc = "abcdefghijklmnopqrstuvwxyz";
-  var kata = "";
+  var temp = '';
+  var result = '';
 
-  for (var i = 0; i < abc.length; i++) {
+  var kamus = 'abcdefghijklmnopqrstuvwxyz';
+
+  for (var i = 0; i < kamus.length; i++) {
     for (var j = 0; j < str.length; j++) {
-      if (abc[i] === str[j]) {
-        kata = kata + abc[i];
+      if (kamus[i] === str[j]) {
+        result+=kamus[i];
+      }
+      if ( j === str[str.length-1]) {
+        break;
       }
     }
   }
-  return kata;
+  return result;
 }
-
 // TEST CASES
 console.log(urutkanAbjad('hello')); // 'ehllo'
 console.log(urutkanAbjad('truncate')); // 'acenrttu'

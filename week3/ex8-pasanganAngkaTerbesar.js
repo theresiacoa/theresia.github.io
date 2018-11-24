@@ -1,13 +1,13 @@
 function pasanganTerbesar(num) {
-  num = num.toString();
-  var nilaiMax = 0;
-  for (var i = 0; i < num; i++) {
-    var puluhan = num[i] + num[i+1];
-    if (nilaiMax < puluhan) {
-      nilaiMax = puluhan;
+  var numStr = num.toString();
+  var max = '';
+  for (var i = 0; i < numStr.length; i++) {
+    var puluhan = numStr[i] + numStr[i+1];
+    if (puluhan > max) {
+      max = puluhan;
     }
   }
-  return Number(nilaiMax);
+  return max;
 }
 
 // TEST CASES

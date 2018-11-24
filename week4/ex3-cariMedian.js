@@ -1,14 +1,13 @@
 function cariMedian(arr) {
-  var index = arr.length-1;
-  var median = 0;
-
-  if (index % 2 === 0) {
-    median = arr[Math.round(index/2)];
-    return median;
-  } else {
-    median = arr[Math.round(index/2)] + arr[Math.floor(index/2)];
-    return median / 2;
-  }
+  var result = 0;
+    if (arr.length % 2 !== 0) {
+      result = arr[(arr.length-1)/2];
+    } else {
+      var median1 = arr[Math.floor((arr.length-1)/2)];
+      var median2 = arr[Math.round((arr.length-1)/2)];
+      result = (median1 + median2) / 2;
+    }
+  return result;
 }
 
 // TEST CASES

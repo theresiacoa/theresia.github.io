@@ -1,60 +1,68 @@
-function changeVocals (str) {
-  var dict = "bfjpvBFJPV";
-  var vokal = "aeiouAEIOU"
-  var kalimat = "";
+function changeVocals(str) {
+  var kamus = 'abefijopuvABEFIJOPUV';
+  var changeVoc = '';
 
   for (var i = 0; i < str.length; i++) {
-    var isVokal = false;
-    for (var j = 0; j < vokal.length; j++) {
-      if (str[i] === vokal[j]) {
-        isVokal = true;
-        kalimat += dict[j];
+    var isChanged = false;
+    for (var j = 0; j < kamus.length; j += 2) {
+      if (str[i] === kamus[j]) {
+        isChanged = true;
+        changeVoc += kamus[j + 1];
       }
     }
-    if (isVokal === false) {
-      kalimat += str[i];
+    //console.log(isChanged, '===', i);
+    if (isChanged === false) {
+      changeVoc += str[i];
     }
   }
-  return kalimat;
+  return changeVoc;
 }
 
-function reverseWord (str) {
-  var reversed = "";
-  for (var i = str.length-1; i >= 0; i--) {
-    reversed = reversed + str[i];
+function reverseWord(str) {
+  var reversed = '';
+  for (var i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
   }
+  //console.log(reversed);
   return reversed;
 }
 
-function setLowerUpperCase (str) {
-  var kalimat = "";
+function setLowerUpperCase(str) {
+  var hasil = '';
   for (var i = 0; i < str.length; i++) {
     if (str[i] === str[i].toUpperCase()) {
-      kalimat = kalimat + str[i].toLowerCase();
+      hasil += str[i].toLowerCase();
     } else {
-      kalimat += str[i].toUpperCase();
+      hasil += str[i].toUpperCase();
     }
   }
-  return kalimat;
+  return hasil;
 }
 
-function removeSpaces (str) {
-  var kalimat = str.split(" ").join("");
-  return kalimat;
+function removeSpaces(str) {
+  var removeSpacing = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== ' ') {
+      removeSpacing += str[i];
+    }
+  }
+  return removeSpacing;
 }
 
-function passwordGenerator (name) {
-  var changeWords = changeVocals(name);
-  var reversed = reverseWord(changeWords);
-  var lowerUpperWord = setLowerUpperCase(reversed);
-  var noSpacing = removeSpaces(lowerUpperWord);
- 
+
+// Single Responsibility Principle
+// Each function only does one thing, and it does it well.
+// Changes in each function do not affect other functions.
+function passwordGenerator(name) {
   if (name.length < 5) {
     return 'Minimal karakter yang diinputkan adalah 5 karakter';
-  } else {
-    return noSpacing;
-  } 
+  }
+  return setLowerUpperCase(
+    reverseWord(
+      changeVocals(
+        removeSpaces(name))));
 }
+
 
 console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'
 console.log(passwordGenerator('Dimitri Wahyudiputra')); // 'BRTVPJDVYHBwJRTJMJd'

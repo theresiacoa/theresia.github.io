@@ -1,21 +1,19 @@
-function deepSum (arr) {
-  var result = [];
-  var sum = 0;
 
+function deepSum (arr) {
+ 
   if (arr.length === 0) {
     return 'No number';
-  } else {
+  }
 
-    for (var i = 0; i < arr.length; i++) {
-      for (var j = 0; j < arr[i].length; j++) {
-        result = result.concat(arr[i][j]);
+  var hasil = 0;
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = 0; j < arr[i].length; j++) {
+      for (var k = 0; k < arr[i][j].length; k++) {
+        hasil += arr[i][j][k];
       }
     }
-    sum = result.reduce(function (a,b) {
-      return a + b;
-    }), 0;
-    return sum;
   }
+  return hasil;
 }
 
 //TEST CASE

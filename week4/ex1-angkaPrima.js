@@ -1,14 +1,10 @@
 function angkaPrima(angka) {
-  if (angka < 2) {
-    return false;
-  } else {
-    for (var i = 2; i < angka; i++) {
-      if (angka%i === 0) {
-        return false;
-      }
+  for (var i = 2; i < angka; i++) {
+    if (angka % i === 0) {
+      return false;
     }
-    return true;
   }
+  return true;
 }
 
 // TEST CASES
